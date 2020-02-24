@@ -26,6 +26,7 @@ h2 {
   margin: auto;
 }
 
+/*Section intro component*/
 section {
   color: #566671;
 }
@@ -55,7 +56,7 @@ section div:first-child h1:after {
   background-color: #4FD9A3;
   left: 51%;
   bottom: 51px;
-  margin-left: 100px;
+  margin-left: 120px;
   margin-top: 30px;
 }
 
@@ -339,6 +340,7 @@ button:hover span {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
+  padding: 0;
 }
 
 .splash .page-intro h1 {
@@ -576,6 +578,10 @@ button:hover span {
 }
 
 /*team*/
+.team div:first-child h1:after {
+  margin-left: 210px;
+}
+
 .team .gallery-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -636,7 +642,10 @@ button:hover span {
 /*pricing*/
 .pricing {
   background-color: #e7eaec;
-  height: 1100px;
+}
+
+.pricing div:first-child h1:after {
+  margin-left: 90px;
 }
 
 .pricing .pricing-wrapper {
@@ -646,10 +655,11 @@ button:hover span {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-bottom: 60px;
 }
 
 .pricing .pricing-wrapper .feature {
-  width: 20%;
+  width: 23%;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,6 +675,9 @@ button:hover span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 2%;
+  -webkit-transition: .8s;
+  transition: .8s;
+  margin-top: 30px;
 }
 
 .pricing .pricing-wrapper .feature p {
@@ -682,6 +695,11 @@ button:hover span {
   color: #fff;
 }
 
+.pricing .pricing-wrapper .feature .buy:hover {
+  background-color: #EDEFF1;
+  color: #4FD9A3;
+}
+
 .pricing .pricing-wrapper .feature .buy p {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 85%;
@@ -693,7 +711,7 @@ button:hover span {
 
 .pricing .pricing-wrapper .feature .buy i {
   font-size: 25px;
-  padding-top: 20px;
+  padding-top: 25px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 15%;
           flex: 1 1 15%;
@@ -710,6 +728,8 @@ button:hover span {
   font-weight: lighter;
   color: #4FD9A3;
   padding: 40px 0 0 30px;
+  text-overflow: hidden;
+  max-width: 100%;
 }
 
 .pricing .pricing-wrapper .feature .box h4 {
@@ -764,6 +784,10 @@ button:hover span {
   display: none;
 }
 
+.second-one .box-content button {
+  text-transform: lowercase;
+}
+
 /*footer*/
 footer .container {
   color: #566671;
@@ -774,11 +798,12 @@ footer .container {
 
 footer .container h4 {
   padding-top: 35px;
-  padding-left: 10%;
+  padding-left: 5%;
   font-weight: lighter;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
 }
 
 footer .container h4 .circle {
@@ -806,5 +831,288 @@ footer .container ul li a {
 
 footer .container ul li a:hover {
   color: #566671;
+}
+
+@media (max-width: 1200px) {
+  .pricing .pricing-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pricing .pricing-wrapper .feature {
+    width: 35%;
+  }
+  /*show-off .second */
+  .show-off .second img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 1050px) {
+  /*Navigation*/
+  .container span {
+    padding-top: 15px;
+  }
+  .container ul {
+    width: 70%;
+  }
+  /*About*/
+  .about div.features-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .feature {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /*our services*/
+  .services div.item-wrapper {
+    padding: 100px 0;
+  }
+  /*team*/
+  .team .gallery-wrapper .gallery-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /*Show-off*/
+  .show-off .wrapper img {
+    max-height: 200px;
+  }
+  /*Banner*/
+  .founder-banner h4 {
+    text-align: center;
+  }
+  /*banner second*/
+  .second-one .box-content h1 {
+    text-align: center;
+  }
+  /*footer*/
+  footer .container h4 {
+    padding-top: 33px;
+    padding-left: 5%;
+  }
+  footer .container ul {
+    width: 45%;
+  }
+}
+
+@media (max-width: 830px) {
+  /*Splash*/
+  .splash .page-intro h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .splash .page-intro h2 {
+    font-size: 20px;
+  }
+  /*our services*/
+  .services div.item-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 100px 0;
+  }
+  .services .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+  .services .item i {
+    margin: auto;
+    padding: 0;
+  }
+  .services .item-title {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+  }
+  .services .item-description {
+    padding: 0;
+    text-align: center;
+  }
+  .pricing .pricing-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pricing .pricing-wrapper .feature {
+    width: 45%;
+  }
+  /*footer*/
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .container h4 {
+    padding-top: 23px;
+    padding-left: 2%;
+    width: 100%;
+    font-size: 18px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .container ul {
+    width: 100%;
+    padding-top: 23px;
+  }
+  /*Show-off*/
+  .show-off .wrapper img {
+    max-height: 200px;
+  }
+  .show-off .wrapper .box h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 675px) {
+  .container span {
+    display: none;
+  }
+  .container ul {
+    width: 90%;
+    margin: auto;
+  }
+  /*Show-off*/
+  .show-off .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #A6B0B6;
+    padding: 100px 0;
+    background-color: #F9F9FA;
+  }
+  .show-off .wrapper:nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #FFFFFF;
+  }
+  .show-off .wrapper:nth-child(2) img {
+    margin-bottom: 40px;
+  }
+  .show-off .wrapper img {
+    max-height: 200px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .show-off .wrapper .box {
+    max-width: 75%;
+    margin: auto;
+  }
+  .show-off .wrapper .box h1 {
+    font-weight: lighter;
+    font-size: 40px;
+    text-align: center;
+  }
+  .show-off .wrapper .box button {
+    margin: 60px auto 0 auto;
+  }
+  /*show-off .second */
+  .show-off .second img {
+    max-height: 150px;
+  }
+  .pricing .pricing-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pricing .pricing-wrapper .feature {
+    width: 60%;
+  }
+}
+
+@media (max-width: 675px) {
+  /*Navigation*/
+  .container ul li a {
+    font-size: 12px;
+  }
+  .container ul li:nth-child(6) {
+    display: none;
+  }
+  /*About*/
+  .about h2 {
+    text-align: center;
+  }
+  .about div.features-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .feature {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    width: 300px;
+  }
+  /*Show-off*/
+  .show-off .wrapper article.box {
+    text-align: center;
+  }
+  section h2,
+  h1 {
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  /*team*/
+  .team .gallery-wrapper .gallery-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .pricing .pricing-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pricing .pricing-wrapper .feature {
+    width: 85%;
+  }
+  /*banner second*/
+  .second-one .box-content h1 {
+    text-align: center;
+  }
+  /*banner second*/
+  .founder-banner .box-content p {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
